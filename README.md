@@ -15,7 +15,7 @@ Download and install LiwingSetup.msi from the link below, it is a Windows-only t
 
 以下のリンクから LiwingSetup.msi をダウンロードしてインストールしてください。Windows専用のツールです。 
 
-[LiwingSetup.msi](https://github.com/kojimadev/Liwing/raw/main/src/ReleaseProduct/LiwingSetup.msi)
+[LiwingSetup.msi](https://github.com/kojimadev/Liwing/raw/master/src/ReleaseProduct/LiwingSetup.msi)
 
 ### How to post a link to Slack
 For example, if you want to create a link to a file path of  `\\servername\test.xlsx`, select that file and run the menu Send-Liwing in the context menu of Explorer.  
