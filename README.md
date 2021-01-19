@@ -25,8 +25,8 @@ If the window shown below appears when running the installer, click the [More In
 
 インストーラの実行時に下図のウィンドウが表示された場合は、[詳細情報]リンクをクリックした上で[実行]ボタンを押してください。
 
-<img src="images/install1.png" width="333">
-<img src="images/install2.png" width="333">
+<img src="Images/install1.png" width="333">
+<img src="Images/install2.png" width="333">
 
 ### How to post a link to Slack (Slackにリンクを投稿する方法)
 For example, if you want to create a link to a file path of  `\\servername\test.xlsx`, select that file and run the menu Send-Liwing in the context menu of Explorer.  
