@@ -93,5 +93,8 @@
   <ItemGroup>
     <Resource Include="exeimage.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="UrlEncoding.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

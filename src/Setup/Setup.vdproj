@@ -21,6 +21,12 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_117A3CB2E7DB437DA308352AD84E4A14"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_19EEF160179C467984217E9909B913C7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -165,6 +171,26 @@
             {
             "SourcePath" = "8:..\\Liwing\\exeimage.ico"
             "TargetName" = "8:exeimage.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_EF824E82EFBB4406B761E802A0707C41"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_117A3CB2E7DB437DA308352AD84E4A14"
+            {
+            "SourcePath" = "8:..\\Liwing\\UrlEncoding.ico"
+            "TargetName" = "8:UrlEncoding.ico"
             "Tag" = "8:"
             "Folder" = "8:_EF824E82EFBB4406B761E802A0707C41"
             "Condition" = "8:"
@@ -539,7 +565,7 @@
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_685ED8086E2F449491304F5CACC766EE"
             {
-            "Name" = "8:Liwing"
+            "Name" = "8:Liwing(no encoding)"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -549,6 +575,20 @@
             "Folder" = "8:_8DF2E4975FAD4ACAB7CD3CAB78B69488"
             "WorkingFolder" = "8:_EF824E82EFBB4406B761E802A0707C41"
             "Icon" = "8:_03E52AF2D57A440EAE9DC4437B74F6B2"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D0D475AF8001431998E6BDC2A25310F4"
+            {
+            "Name" = "8:Liwing(url encoding)"
+            "Arguments" = "8:-e"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_322E3AA380A34E3094DED54C8CA1072E"
+            "Folder" = "8:_8DF2E4975FAD4ACAB7CD3CAB78B69488"
+            "WorkingFolder" = "8:_EF824E82EFBB4406B761E802A0707C41"
+            "Icon" = "8:_117A3CB2E7DB437DA308352AD84E4A14"
             "Feature" = "8:"
             }
         }
