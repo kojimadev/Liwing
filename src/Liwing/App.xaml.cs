@@ -23,6 +23,11 @@ namespace Liwing
 		const string CustomURLSchema = "lw:";
 
 		/// <summary>
+		/// URLエンコードを指定するパラメータ文字列
+		/// </summary>
+		const string URLEncodeParam = "-e";
+
+		/// <summary>
 		/// Fileスキーマ
 		/// </summary>
 		private const string FileSchema = "//file/";
@@ -58,6 +63,7 @@ namespace Liwing
 
 				// [送る]メニューから複数のファイルを指定された場合、
 				// 複数のファイルパスが指定されているため、それに対応するように各引数に対して実行する
+				bool urlEncode = false;
 				StringBuilder copyString =  new StringBuilder();
 				for (int index = 1; index < args.Length; index++)
 				{
@@ -67,11 +73,16 @@ namespace Liwing
 						// カスタムURLを指定している場合は、パスのファイルを実行
 						ExecuteFile(arg);
 					}
+					else if (arg == URLEncodeParam)
+					{
+						// URLエンコードを指定するパラメータが指定されている場合は、以降のパスをURLエンコードする
+						urlEncode = true;
+					}
 					else
 					{
 						// カスタムURLでなければ、クリップボードにコピーするためのファイルパス文字列を取得する
-						 var copyFilePath = GetCopyFilePath(arg, false);
-						 copyString.AppendLine(copyFilePath);
+						var copyFilePath = GetCopyFilePath(arg, urlEncode);
+						copyString.AppendLine(copyFilePath);
 					}
 				}
 
