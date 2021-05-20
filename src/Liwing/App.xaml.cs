@@ -92,6 +92,11 @@ namespace Liwing
 					Clipboard.SetData(DataFormats.Text, copyString);
 				}
 			}
+			catch (Exception ex)
+			{
+				Clipboard.SetData(DataFormats.Text, ex.ToString());
+				MessageBox.Show($"すみません、エラーが発生しました。以下の文字列をクリップボードにコピーしたので開発者にお知らせください。{Environment.NewLine}{ex}");
+			}
 			finally
 			{
 				// 必ずアプリケーションを終了する
