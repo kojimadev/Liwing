@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Web;
 using System.Windows;
@@ -89,13 +90,23 @@ namespace Liwing
 				// コピー対象の文字列が存在する場合、クリップボードにコピーする
 				if (copyString.Length > 0)
 				{
-					Clipboard.SetData(DataFormats.Text, copyString);
+					try
+					{
+						Clipboard.SetData(DataFormats.Text, copyString);
+					}
+					catch
+					{
+						// 複数のアプリで同時にクリップボードにアクセスする場合に例外が発生するため
+						// フェールセーフとして少し間をおいて再び実行する(2回目でも失敗した場合はエラーとする)
+						// https://threeshark3.com/clipboard-com-exception/
+						Thread.Sleep(200);
+						Clipboard.SetData(DataFormats.Text, copyString);
+					}
 				}
 			}
 			catch (Exception ex)
 			{
-				Clipboard.SetData(DataFormats.Text, ex.ToString());
-				MessageBox.Show($"すみません、エラーが発生しました。以下の文字列をクリップボードにコピーしたので開発者にお知らせください。{Environment.NewLine}{ex}");
+				MessageBox.Show($"Sorry, the following exception occurred and the execution failed.{Environment.NewLine}{ex}");
 			}
 			finally
 			{
